@@ -4,5 +4,9 @@
 
 .app {
   background-color: #fafafa;
-  height: 100vh;
+}
+
+.app__signup {
+  display: flex;
+  flex-direction: column;
 }

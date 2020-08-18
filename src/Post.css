@@ -1,4 +1,17 @@
-.post__image{
+.post {
+    max-width: 500px;
+    background-color: white;
+    border: 1px solid lightgray;
+    margin-bottom: 45px;
+}
+
+.post__image {
     width: 100%;
     object-fit: contain;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.post__text {
+    padding: 20px;
 }
