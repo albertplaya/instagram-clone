@@ -3,4 +3,11 @@
     object-fit: contain;
     padding: 20px;
     border-bottom: solid 1px lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app_headerImage{
+    object-fit: contain;
 }
