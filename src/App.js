@@ -4,6 +4,7 @@ import "./App.css";
 import "./Header.css";
 import Post from "./Post.js";
 import ImageUpload from "./ImageUpload.js";
+import InstagramEmbed from "react-instagram-embed";
 import { db, auth } from "./firebase";
 
 const App = () => {
@@ -40,16 +41,33 @@ const App = () => {
       <Header />
 
       <div className="app__post">
-        {posts.map(({ id, post }) => (
-          <Post
-            key={id}
-            username={post.username}
-            caption={post.caption}
-            imageUrl={post.imageUrl}
+        <div className="app__postsLeft">
+          {posts.map(({ id, post }) => (
+            <Post
+              key={id}
+              postId={id}
+              user={user}
+              username={post.username}
+              caption={post.caption}
+              imageUrl={post.imageUrl}
+            />
+          ))}
+        </div>
+        <div className="app__postsRight">
+          <InstagramEmbed
+            url="https://instagr.am/p/Zw9o4/"
+            maxWidth={320}
+            hideCaption={false}
+            containerTagName="div"
+            protocol=""
+            injectScript
+            onLoading={() => {}}
+            onSuccess={() => {}}
+            onAfterRender={() => {}}
+            onFailure={() => {}}
           />
-        ))}
+        </div>
       </div>
-
       {user?.displayName ? (
         <ImageUpload username={user.displayName} />
       ) : (

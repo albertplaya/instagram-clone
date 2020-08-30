@@ -11,6 +11,12 @@
   flex-direction: column;
 }
 
-.app__post{
+.app__post {
   padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.app__postsRight {
+  padding-left: 20px;
 }
